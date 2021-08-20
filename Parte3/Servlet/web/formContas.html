@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <title>Formulário para Tabelas</title>
+    </head>
+    <style>
+        body{background-color: rgb(37, 71, 94);
+            color: rgb(37, 71, 94);}
+    </style>
+    <body>
+        <div class="container">
+            <div class="card my-5 px-5 py-5" align="center">
+                <h2>Formulário Para Preencher Tabelas</h2>
+            
+                <legend>Tabela Contas</legend>
+                <form method="POST" action="formsContas">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-froup">
+                                <label for="id">ID</label><br>
+                                <input type="text" class="form-control" id="id" name="id"><br>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-froup">
+                                <label for="id_usuario">ID Usuário</label><br>
+                                <input type="text" class="form-control" id="id_usuario" name="id_usuario"><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-froup">
+                                <label for="nome_conta">Nome Conta</label><br>
+                                <input type="text" class="form-control" id="nome_conta" name="nome_conta"><br>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-froup">
+                                <label for="banco">Número do Banco</label><br>
+                                <input type="text" class="form-control" id="banco" name="banco"><br>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-froup">
+                                <label for="agencia">Agência</label><br>
+                                <input type="text" class="form-control" id="agencia" name="agencia"><br>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-froup">
+                                <label for="conta_corrente">Conta Corrente</label><br>
+                                <input type="text" class="form-control" id="conta_corrente" name="conta_corrente"><br>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success" align="center">Enviar</button>
+                    <a href="escolheForm.html" class="btn btn-info" role="button" align="center">Voltar</a>
+                </form>
+            </div>
+        </div>
+
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

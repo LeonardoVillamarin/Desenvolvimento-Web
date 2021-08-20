@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <title>Formulário para Tabelas</title>
+    </head>
+    <style>
+        body{background-color: rgb(37, 71, 94);
+            color: rgb(37, 71, 94);}
+    </style>
+    <body>
+        <div class="container">
+            <div class="card my-5 px-5 py-5" align="center">
+                <h2>Formulário Para Preencher Tabelas</h2>
+                <legend>Tabela Administradores</legend>
+                <div col>
+                    <form method="POST" action="formsAdmin">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="id">ID</label><br>
+                                    <input type="text" class="form-control" id="id" name="id"><br>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="cpf">CPF</label><br>
+                                    <input type="text" class="form-control mascara_cpf" id="cpf" name="cpf"><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="nome">Nome</label><br>
+                                    <input type="text" class="form-control" id="nome" name="nome"><br>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="password">Senha</label><br>
+                                    <input type="password" class="form-control" id="password" style="min-width:300px;" name="password"><br>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success" align="center">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $('.mascara_cpf').mask('000.000.000-00', {reverse: true});
+        });
+        </script> 
+    </body>
+</html>

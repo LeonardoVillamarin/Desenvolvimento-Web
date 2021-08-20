@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <title>Formulário para Tabelas</title>
+    </head>
+    <style>
+        body{background-color: rgb(37, 71, 94);}
+    </style>
+    <body>
+        <div class="container">
+            <div class="card my-5 px-5 py-5" align="center">
+                <h2>Formulário Para Preencher Tabelas</h2>
+                <legend>Tabela Lançamento</legend>
+                <form method="POST" action="formsLancamentos">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="id">ID</label><br>
+                                <input type="text" class="form-control" id="id" name="id"><br>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="id_conta">ID Conta</label><br>
+                                <input type="text" class="form-control" id="id_conta" name="id_conta"><br>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="id_categoria">ID Categoria</label><br>
+                                <input type="text" class="form-control" id="id_categoria" name="id_categoria"><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="valor">Valor</label><br>
+                                <input type="text" class="form-control mascara_valor" id="valor" name="valor"><br>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="data">Data</label><br>
+                                <input type="text" class="form-control mascara_data" id="data" name="data"><br>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="operacao">Operação</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="operacao" id="credito" value="C">
+                                <label class="form-check-label" for="credito">
+                                    Crédito
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="operacao" id="debito" value="D">
+                                <label class="form-check-label" for="debito">
+                                    Débito
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" align="center">
+                            <div class="form-group">
+                                <label for="descricao">Descrição</label><br>
+                                <input type="text" class="form-control" id="descricao" name="descricao"><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" align="center">
+                            <button type="submit" class="btn btn-success" align="center">Enviar</button>
+                            <a href="escolheForm.html" class="btn btn-info" role="button" align="center">Voltar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.mascara_data').mask('00/00/0000');
+                $('.mascara_valor').mask("#.##0,00", {reverse: true});
+            });
+        </script>
+    </body>
+</html>
